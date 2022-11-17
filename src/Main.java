@@ -1,28 +1,49 @@
 public class Main {
+
+    public static void leapYear(int yearNum) {
+    double yearDiv4 = yearNum / 4.0;
+        if(yearDiv4 %1!=0.0)System.out.println(yearNum +"год не високосный");
+        else if(yearDiv4 %25==0.0&&yearDiv4 %100!=0.0)System.out.println(yearNum +" - не високосный год");
+        else System.out.println(yearNum +" - високосный год");
+}
     public static void main(String[] args) {
-        System.out.println("*** task 1 ***");
+
+        System.out.println(" * Task 10-1 ");
+        int yearNum = 2100;
+        leapYear(yearNum);
+        yearNum = 2000;
+        leapYear(yearNum);
+
+
+        boolean clientOS = true;
+        if (clientOS) System.out.println("Установите версию приложения для Android по ссылке");
+        else System.out.println("Установите версию приложения для iOS по ссылке");
+
+// Task 2
+        System.out.println(" * Task 2 ");
+        int clientDeviceYear;
+        clientDeviceYear = 2014;
+        String lightVersion;
+        if (clientDeviceYear >= 2015) lightVersion = " ";
+        else lightVersion = " облегченную ";
+        if (clientOS) System.out.println("Установите"+lightVersion+"версию приложения для Android по ссылке");
+        else System.out.println("Установите"+lightVersion+"версию приложения для iOS по ссылке");
+
+// Task 3
+        System.out.println(" * Task 3 ");
+
+// Task 4
+        System.out.println(" * Task 4 ");
+        int deliveryDistance = 95;
+        System.out.println("Потребуется дней: " + (1+(deliveryDistance+19)/40));
+
+
         String firstName = "Ivan";
         String lastName = "Ivanov";
         String middleName = "Ivanovich";
         String fullName = String.join(" ",lastName,firstName,middleName);
-        System.out.println("ФИО сотрудника - "+fullName);
+        System.out.println("ФИО сотрудника - "+fullName+"\n");
 
-        System.out.println("\n*** task 2 ***");
-        System.out.println("Вывести ФИО заглавными буквами");
-        String strUpp = fullName.toUpperCase();
-        System.out.println("Данные ФИО сотрудника для заполнения отчета - "+strUpp);
-
-        System.out.println("\n*** task 3 ***");
-        System.out.println("Заменить букву ё на букву е");
-        fullName = "Иванов Семён Семёнович";
-        System.out.println("Было:");
-        System.out.println("Данные ФИО сотрудника - "+fullName);
-        String strE = fullName.replace('ё','е');
-        System.out.println("Стало:");
-        System.out.println("Данные ФИО сотрудника - "+strE);
-
-        String[] words = fullName.split(" ");
-        for (String word: words) System.out.println(word);
 // Задачки со звездочками *****************
         System.out.println("********* Задачки со звездочками **********");
         fullName = "Ivanov Ivan Ivanovich";
